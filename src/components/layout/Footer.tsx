@@ -1,79 +1,103 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Clock } from "lucide-react";
 import { NAV_LINKS, CONTACT_INFO, SOCIAL_LINKS } from "@/lib/constants";
 
 export function Footer() {
   return (
-    <footer className="bg-gray-50 border-t">
-      <div className="container mx-auto px-4 md:px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-gray-900 text-gray-300 border-t border-gray-800">
+      <div className="container mx-auto px-4 md:px-6 py-12 lg:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+
+          {/* Column 1: About */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold text-green-800">Kanchankaya</h3>
-            <p className="text-sm text-gray-600">
-              Lucknow&apos;s oldest and most trusted naturopathy center since 1996. Dedicated to natural healing and holistic wellness.
+            <h3 className="text-xl font-bold text-white mb-2">Kanchankaya</h3>
+            <p className="text-sm text-gray-400 leading-relaxed">
+              Lucknow&apos;s oldest and most trusted naturopathy center since 1996. We provide holistic healing through nature&apos;s wisdom, treating the root cause of ailments without side effects.
             </p>
-            <div className="flex space-x-4">
-              <a href={SOCIAL_LINKS.facebook} className="text-gray-500 hover:text-green-600">
+            <div className="flex space-x-4 pt-2">
+              <a href={SOCIAL_LINKS.facebook} className="bg-gray-800 p-2 rounded-full text-gray-400 hover:text-white hover:bg-green-600 transition-colors">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </a>
-              <a href={SOCIAL_LINKS.instagram} className="text-gray-500 hover:text-green-600">
+              <a href={SOCIAL_LINKS.instagram} className="bg-gray-800 p-2 rounded-full text-gray-400 hover:text-white hover:bg-pink-600 transition-colors">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </a>
             </div>
           </div>
 
+          {/* Column 2: Quick Links & Services */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">Quick Links</h3>
+            <h3 className="text-sm font-bold text-white tracking-wider uppercase mb-6">Quick Links</h3>
             <ul className="space-y-3">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-gray-600 hover:text-green-600">
+                  <Link href={link.href} className="text-sm hover:text-green-400 transition-colors">
                     {link.label}
                   </Link>
                 </li>
               ))}
+              <li><Link href="/services" className="text-sm hover:text-green-400 transition-colors">All Services</Link></li>
             </ul>
           </div>
 
+          {/* Column 3: Contact Info */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">Services</h3>
-            <ul className="space-y-3">
-              <li><Link href="/services#naturopathy" className="text-sm text-gray-600 hover:text-green-600">Naturopathy</Link></li>
-              <li><Link href="/services#yoga" className="text-sm text-gray-600 hover:text-green-600">Yoga Therapy</Link></li>
-              <li><Link href="/services#acupressure" className="text-sm text-gray-600 hover:text-green-600">Acupressure</Link></li>
-              <li><Link href="/services#pain-management" className="text-sm text-gray-600 hover:text-green-600">Pain Management</Link></li>
-              <li><Link href="/services#diet" className="text-sm text-gray-600 hover:text-green-600">Diet & Nutrition</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">Contact</h3>
-            <ul className="space-y-3">
+            <h3 className="text-sm font-bold text-white tracking-wider uppercase mb-6">Contact Us</h3>
+            <ul className="space-y-4">
               <li className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-green-600 shrink-0" />
-                <span className="text-sm text-gray-600">{CONTACT_INFO.address}</span>
+                <MapPin className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
+                <span className="text-sm">{CONTACT_INFO.address}</span>
               </li>
               <li className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-green-600 shrink-0" />
-                <a href={`tel:${CONTACT_INFO.phone}`} className="text-sm text-gray-600 hover:text-green-600">
+                <Phone className="h-5 w-5 text-green-500 shrink-0" />
+                <a href={`tel:${CONTACT_INFO.phone}`} className="text-sm hover:text-green-400 transition-colors">
                   {CONTACT_INFO.phone}
                 </a>
               </li>
               <li className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-green-600 shrink-0" />
-                <a href={`mailto:${CONTACT_INFO.email}`} className="text-sm text-gray-600 hover:text-green-600">
+                <Mail className="h-5 w-5 text-green-500 shrink-0" />
+                <a href={`mailto:${CONTACT_INFO.email}`} className="text-sm hover:text-green-400 transition-colors">
                   {CONTACT_INFO.email}
                 </a>
               </li>
+              <li className="flex items-start space-x-3">
+                <Clock className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
+                <div>
+                   <span className="text-sm block">Open 7 Days a Week</span>
+                   <span className="text-xs text-gray-500">8:00 AM - 8:00 PM</span>
+                </div>
+              </li>
             </ul>
           </div>
+
+          {/* Column 4: Areas Served (SEO) */}
+          <div>
+            <h3 className="text-sm font-bold text-white tracking-wider uppercase mb-6">Areas We Serve</h3>
+            <div className="flex flex-wrap gap-2">
+              {["Lucknow", "Alambagh", "Krishna Nagar", "Gomti Nagar", "Indira Nagar", "Hazratganj", "Aliganj", "Kanpur Road"].map((area, i) => (
+                <span key={i} className="text-xs bg-gray-800 px-2 py-1 rounded text-gray-400 border border-gray-700">
+                  {area}
+                </span>
+              ))}
+            </div>
+            <div className="mt-6">
+               <a
+                 href={`tel:${CONTACT_INFO.phone}`}
+                 className="block w-full text-center bg-green-700 hover:bg-green-600 text-white font-bold py-3 rounded-lg transition-colors"
+               >
+                 Book Appointment
+               </a>
+            </div>
+          </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-gray-200">
-          <p className="text-xs text-center text-gray-500">
-            &copy; {new Date().getFullYear()} Kanchankaya Naturopathy Center. All rights reserved.
-          </p>
+
+        <div className="mt-12 pt-8 border-t border-gray-800 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+          <p>&copy; {new Date().getFullYear()} Kanchankaya Naturopathy Center. All rights reserved.</p>
+          <div className="flex gap-4 mt-4 md:mt-0">
+             <Link href="/privacy" className="hover:text-gray-300">Privacy Policy</Link>
+             <Link href="/terms" className="hover:text-gray-300">Terms of Service</Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,7 +1,17 @@
 import { Hero } from "@/components/sections/Hero";
-import { AboutSummary } from "@/components/sections/AboutSummary";
-import { ServicesSummary } from "@/components/sections/ServicesSummary";
+import { AboutSection } from "@/components/sections/AboutSection";
+import { ServicesSection } from "@/components/sections/ServicesSection";
+import { ConditionsTreated } from "@/components/sections/ConditionsTreated";
+import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { FAQ } from "@/components/sections/FAQ";
+import { TreatmentProcess } from "@/components/sections/TreatmentProcess";
+import { Team } from "@/components/sections/Team";
+import { Facility } from "@/components/sections/Facility";
+import { LocalSEO } from "@/components/sections/LocalSEO";
+import { BlogTeasers } from "@/components/sections/BlogTeasers";
+import { Contact } from "@/components/sections/Contact";
+import { FloatingElements } from "@/components/ui/FloatingElements";
 import { JSON_LD_DATA } from "@/lib/schema";
 
 export default function Home() {
@@ -12,10 +22,19 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD_DATA) }}
       />
       <Hero />
-      <AboutSummary />
-      <ServicesSummary />
+      <AboutSection />
+      <ServicesSection />
+      <ConditionsTreated />
+      <WhyChooseUs />
+      <TreatmentProcess />
       <Testimonials />
-      {/* Other sections like Conditions Treated, FAQ, etc. can be added here */}
+      <Team />
+      <Facility />
+      <FAQ />
+      <BlogTeasers />
+      <LocalSEO />
+      <Contact />
+      <FloatingElements />
     </>
   );
 }

@@ -17,11 +17,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Best Naturopathy Center in Lucknow | Kanchankaya Since 1996",
   description: "Leading naturopathy center in Lucknow since 1996. Expert natural healing for chronic pain, diabetes, obesity & stress. 4.7★ rated. Book consultation today!",
-  keywords: "naturopathy center Lucknow, naturopathy treatment Lucknow, best naturopathy Lucknow, Kanchankaya Naturopathy, naturopathy clinic Lucknow",
+  keywords: "naturopathy center in Lucknow, naturopathy treatment in Lucknow, best naturopathy Lucknow, Kanchankaya Naturopathy, naturopathy clinic Lucknow, natural healing Lucknow, yoga therapy Lucknow, acupressure treatment Lucknow",
   openGraph: {
     title: "Best Naturopathy Center in Lucknow | Kanchankaya Since 1996",
-    description: "Leading naturopathy center in Lucknow since 1996. Expert natural healing for chronic pain, diabetes, obesity & stress. 4.7★ rated.",
-    url: "https://mrsvandanamishra.whitecoats.com/", // Keeping existing URL as requested in MD
+    description: "Leading naturopathy center in Lucknow since 1996. Expert natural healing for chronic pain, diabetes, obesity & stress. 4.7★ rated. Book consultation today!",
+    url: "https://mrsvandanamishra.whitecoats.com/",
     type: "website",
     locale: "en_IN",
   },
