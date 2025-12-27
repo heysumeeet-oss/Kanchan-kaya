@@ -1,61 +1,109 @@
-import { Phone } from "lucide-react";
+import { Phone, Star, Users, MapPin, Building, CheckCircle, GraduationCap } from "lucide-react";
+import { CONTACT_INFO } from "@/lib/constants";
 
 export function Hero() {
   return (
-    <section className="relative bg-green-50 py-20 lg:py-32 overflow-hidden">
-      {/* Background pattern or image can go here */}
-      <div className="absolute inset-0 bg-white/40 pointer-events-none"></div>
+    <section className="relative bg-gradient-to-b from-green-50 to-white py-12 md:py-20 lg:py-28 overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 bg-[url('/bg-pattern.svg')] opacity-10 pointer-events-none"></div>
 
       <div className="container relative mx-auto px-4 md:px-6">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
-          <div className="space-y-8">
-            <h1 className="text-4xl font-extrabold tracking-tight text-green-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
+        <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
+          <div className="space-y-6 md:space-y-8">
+
+            {/* Location Badge */}
+            <div className="inline-flex items-center gap-1.5 rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-800 border border-green-200">
+              <MapPin className="h-3.5 w-3.5" />
+              <span>Krishna Nagar, Alambagh, Lucknow | Open 7 Days</span>
+            </div>
+
+            <h1 className="text-3xl font-extrabold tracking-tight text-green-950 sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-tight">
               Best Naturopathy Treatment Center in Lucknow <br className="hidden lg:inline" />
-              <span className="text-green-600">Natural Healing Since 1996</span>
+              <span className="text-green-600 block mt-2">Natural Healing Since 1996</span>
             </h1>
 
-            <p className="text-lg text-gray-700 md:text-xl max-w-[600px]">
-              Transform Your Health Through Nature&apos;s Wisdom. Expert Drug-Free Treatments for Chronic Pain, Diabetes, Obesity & Stress Relief.
-            </p>
+            <div className="space-y-4">
+              <h2 className="text-lg md:text-xl font-medium text-green-800">
+                Transform Your Health Through Nature&apos;s Wisdom - Expert Drug-Free Treatments for Chronic Pain, Diabetes, Obesity & Stress Relief in Lucknow
+              </h2>
 
-            <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-green-100">
-                <span className="text-yellow-500">⭐ 4.7/5</span>
-                <span className="text-sm font-medium text-gray-600">(260+ Reviews)</span>
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+                Welcome to Kanchankaya Naturopathy Center, Lucknow&apos;s most trusted naturopathy clinic since 1996. Led by Dr. Vandana Mishra with 29+ years of experience, we provide comprehensive natural healing solutions combining naturopathy, yoga therapy, acupressure, physiotherapy, and holistic wellness treatments.
+              </p>
+            </div>
+
+            {/* Trust Badges */}
+            <div className="flex flex-wrap gap-3 md:gap-4">
+              <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
+                <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
+                <span className="text-sm font-semibold text-gray-700">4.7/5 Rating</span>
               </div>
-              <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-green-100">
-                <span className="text-green-600">👥</span>
-                <span className="text-sm font-medium text-gray-600">10,000+ Patients</span>
+              <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
+                <Users className="h-4 w-4 text-green-600" />
+                <span className="text-sm font-semibold text-gray-700">10,000+ Patients</span>
+              </div>
+               <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
+                <Building className="h-4 w-4 text-green-600" />
+                <span className="text-sm font-semibold text-gray-700">Est. 1996</span>
+              </div>
+               <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
+                <GraduationCap className="h-4 w-4 text-green-600" />
+                <span className="text-sm font-semibold text-gray-700">29+ Yrs Expert</span>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+             {/* Additional Trust Badge row for smaller screens if needed, or wrap above */}
+             <div className="flex items-center gap-2 text-sm text-green-700 font-medium">
+               <CheckCircle className="h-4 w-4" /> 100% Natural & Drug-Free Treatments
+             </div>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a
-                href="tel:+919935364157"
-                className="inline-flex items-center justify-center rounded-lg bg-green-700 px-8 py-4 text-base font-semibold text-white shadow-lg transition-all hover:bg-green-800 hover:-translate-y-1"
+                href={`tel:${CONTACT_INFO.phone}`}
+                className="inline-flex items-center justify-center rounded-lg bg-green-700 px-8 py-4 text-base font-bold text-white shadow-lg transition-all hover:bg-green-800 hover:shadow-xl hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 w-full sm:w-auto"
               >
                 <Phone className="mr-2 h-5 w-5" />
                 Book Free Consultation
               </a>
               <a
-                href="https://wa.me/919935364157"
-                className="inline-flex items-center justify-center rounded-lg bg-green-100 px-8 py-4 text-base font-semibold text-green-800 shadow-sm transition-all hover:bg-green-200 border border-green-200"
+                href={CONTACT_INFO.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-lg bg-green-50 px-8 py-4 text-base font-bold text-green-700 shadow-sm transition-all hover:bg-green-100 border-2 border-green-200 hover:border-green-300 w-full sm:w-auto"
               >
                 WhatsApp Now
               </a>
             </div>
-
-            <p className="text-sm text-gray-500 font-medium">
-              📍 Krishna Nagar, Alambagh, Lucknow | Open 7 Days
-            </p>
           </div>
 
-          <div className="relative lg:h-full min-h-[300px] lg:min-h-[500px] rounded-2xl overflow-hidden bg-green-200 shadow-2xl">
-             {/* Placeholder for Hero Image */}
-             <div className="absolute inset-0 flex items-center justify-center text-green-800/20 text-6xl font-bold bg-gradient-to-br from-green-100 to-green-300">
-                Nature&apos;s Healing
-             </div>
-             {/* Use an actual image if provided or keep placeholder */}
+          <div className="relative mt-8 lg:mt-0">
+             {/* Main Image Container */}
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gray-200 aspect-[4/3] lg:aspect-[5/6]">
+               {/* Placeholder for actual image - replace with Next.js Image component when assets are available */}
+               <div className="absolute inset-0 bg-gradient-to-br from-green-100 to-green-300 flex items-center justify-center">
+                   <div className="text-center p-8">
+                       <span className="block text-6xl mb-4">🌿</span>
+                       <p className="text-green-800 font-medium text-lg">Healing Mind, Body & Spirit</p>
+                   </div>
+               </div>
+            </div>
+
+            {/* Floating Card Element */}
+            <div className="absolute -bottom-6 -left-6 md:bottom-8 md:-left-12 bg-white p-4 md:p-6 rounded-xl shadow-xl border border-green-50 max-w-[280px] hidden md:block animate-in fade-in slide-in-from-bottom-4 duration-1000">
+               <div className="flex items-center gap-3 mb-2">
+                 <div className="h-10 w-10 bg-green-100 rounded-full flex items-center justify-center">
+                    <Star className="h-5 w-5 text-green-600 fill-green-600" />
+                 </div>
+                 <div>
+                   <p className="font-bold text-gray-900">Top Rated</p>
+                   <p className="text-xs text-gray-500">Center in Lucknow</p>
+                 </div>
+               </div>
+               <p className="text-sm text-gray-600">
+                 &quot;Best naturopathy center in Lucknow. Dr. Vandana Mishra is excellent.&quot;
+               </p>
+            </div>
           </div>
         </div>
       </div>
