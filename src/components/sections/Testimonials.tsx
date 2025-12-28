@@ -3,13 +3,13 @@ import { Star, Phone } from "lucide-react";
 export function Testimonials() {
   const testimonials = [
     {
-      text: "I was suffering from severe rheumatoid arthritis with almost my entire spine dysfunctional. After just one month of naturopathy, physiotherapy, and acupressure treatment at Kanchankaya, I can walk again and heal myself without any side effects. Dr. Vandana Mishra and her team turned my life around.",
+      text: "I was suffering from severe rheumatoid arthritis with almost my entire spine dysfunctional. After just one month of naturopathy, physiotherapy, and acupressure treatment at Kanchankaya, I can walk again and heal myself without any side effects. Dr. Vandana Mishra and her team turned my life around. Highly recommended for anyone with chronic pain.",
       author: "Verified Patient",
       location: "Lucknow",
       title: "Arthritis Relief"
     },
     {
-      text: "My wife had acute spondylosis and scoliosis with curved, damaged vertebrae. We tried Kerala Ayurveda treatment for 10 months in Dubai with no benefit. At Kanchankaya, Dr. Vandana and Dr. Satyendra Mishra treated her... In just 10 days, she felt much relieved. The staff is well-trained and professional.",
+      text: "My wife had acute spondylosis and scoliosis with curved, damaged vertebrae. We tried Kerala Ayurveda treatment for 10 months in Dubai with no benefit. At Kanchankaya, Dr. Vandana and Dr. Satyendra Mishra treated her with a combination of acupressure, yoga, and naturopathy. In just 10 days, she felt much relieved. The staff is well-trained and professional.",
       author: "Verified Patient",
       location: "Lucknow",
       title: "Spine & Back Pain"
@@ -57,10 +57,10 @@ export function Testimonials() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-green-950 sm:text-4xl mb-4">
-            What Our Patients Say
+            What Our Patients Say - Real Reviews from Lucknow Residents
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Real reviews from Lucknow residents who have experienced transformative healing.
+            Don&apos;t just take our word for it. Read genuine testimonials from patients who have experienced transformative healing at Kanchankaya Naturopathy Center Lucknow.
           </p>
           <div className="flex items-center justify-center gap-2 mt-4 text-yellow-500">
              <Star className="fill-current w-5 h-5" />
@@ -101,16 +101,16 @@ export function Testimonials() {
         <div className="mt-16 bg-green-900 rounded-3xl p-8 md:p-12 text-center text-white relative overflow-hidden">
            <div className="absolute top-0 left-0 w-full h-full bg-[url('/pattern-white.svg')] opacity-5"></div>
            <div className="relative z-10">
-             <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to Start Your Healing Journey?</h3>
+             <h3 className="text-2xl md:text-3xl font-bold mb-4">Join thousands of satisfied patients who have transformed their health naturally.</h3>
              <p className="text-green-100 mb-8 max-w-2xl mx-auto">
-                Join thousands of satisfied patients who have transformed their health naturally.
+                Book your consultation today!
              </p>
              <a
                href="tel:+919935364157"
-               className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-base font-bold text-green-900 shadow-xl transition-transform hover:scale-105 hover:bg-green-50"
+               className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-base font-bold text-green-900 shadow-xl transition-transform hover:scale-105 hover:bg-green-50 w-full sm:w-auto"
              >
                <Phone className="w-5 h-5 mr-2" />
-               Book Your Consultation Today
+               Book Consultation
              </a>
            </div>
         </div>

@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     url: "https://mrsvandanamishra.whitecoats.com/",
     type: "website",
     locale: "en_IN",
+    // image to be added if available, for now following existing pattern
   },
   twitter: {
     card: "summary_large_image",

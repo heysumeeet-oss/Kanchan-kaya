@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, Facebook, Instagram, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Clock, ArrowRight } from "lucide-react";
 import { NAV_LINKS, CONTACT_INFO, SOCIAL_LINKS } from "@/lib/constants";
 
 export function Footer() {
@@ -15,29 +15,31 @@ export function Footer() {
               Lucknow&apos;s oldest and most trusted naturopathy center since 1996. We provide holistic healing through nature&apos;s wisdom, treating the root cause of ailments without side effects.
             </p>
             <div className="flex space-x-4 pt-2">
-              <a href={SOCIAL_LINKS.facebook} className="bg-gray-800 p-2 rounded-full text-gray-400 hover:text-white hover:bg-green-600 transition-colors">
+              <a href={SOCIAL_LINKS.facebook} aria-label="Facebook" className="bg-gray-800 p-2 rounded-full text-gray-400 hover:text-white hover:bg-green-600 transition-colors">
                 <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
               </a>
-              <a href={SOCIAL_LINKS.instagram} className="bg-gray-800 p-2 rounded-full text-gray-400 hover:text-white hover:bg-pink-600 transition-colors">
+              <a href={SOCIAL_LINKS.instagram} aria-label="Instagram" className="bg-gray-800 p-2 rounded-full text-gray-400 hover:text-white hover:bg-pink-600 transition-colors">
                 <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
               </a>
             </div>
           </div>
 
-          {/* Column 2: Quick Links & Services */}
+          {/* Column 2: Quick Links */}
           <div>
-            <h3 className="text-sm font-bold text-white tracking-wider uppercase mb-6">Quick Links</h3>
+            <h3 className="text-sm font-bold text-white tracking-wider uppercase mb-6">Explore</h3>
             <ul className="space-y-3">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm hover:text-green-400 transition-colors">
-                    {link.label}
+                  <Link href={link.href} className="text-sm hover:text-green-400 transition-colors flex items-center gap-2">
+                    <ArrowRight className="h-3 w-3 text-gray-600" /> {link.label}
                   </Link>
                 </li>
               ))}
-              <li><Link href="/services" className="text-sm hover:text-green-400 transition-colors">All Services</Link></li>
+              <li>
+                  <Link href="/services" className="text-sm hover:text-green-400 transition-colors flex items-center gap-2">
+                    <ArrowRight className="h-3 w-3 text-gray-600" /> All Services
+                  </Link>
+              </li>
             </ul>
           </div>
 
@@ -57,7 +59,7 @@ export function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-green-500 shrink-0" />
-                <a href={`mailto:${CONTACT_INFO.email}`} className="text-sm hover:text-green-400 transition-colors">
+                <a href={`mailto:${CONTACT_INFO.email}`} className="text-sm hover:text-green-400 transition-colors break-all">
                   {CONTACT_INFO.email}
                 </a>
               </li>
@@ -65,7 +67,7 @@ export function Footer() {
                 <Clock className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
                 <div>
                    <span className="text-sm block">Open 7 Days a Week</span>
-                   <span className="text-xs text-gray-500">8:00 AM - 8:00 PM</span>
+                   <span className="text-xs text-gray-500">Including Sundays & Holidays</span>
                 </div>
               </li>
             </ul>
@@ -74,17 +76,17 @@ export function Footer() {
           {/* Column 4: Areas Served (SEO) */}
           <div>
             <h3 className="text-sm font-bold text-white tracking-wider uppercase mb-6">Areas We Serve</h3>
-            <div className="flex flex-wrap gap-2">
-              {["Lucknow", "Alambagh", "Krishna Nagar", "Gomti Nagar", "Indira Nagar", "Hazratganj", "Aliganj", "Kanpur Road"].map((area, i) => (
-                <span key={i} className="text-xs bg-gray-800 px-2 py-1 rounded text-gray-400 border border-gray-700">
+            <div className="flex flex-wrap gap-2 mb-6">
+              {["Lucknow", "Alambagh", "Krishna Nagar", "Gomti Nagar", "Indira Nagar", "Hazratganj", "Aliganj", "Kanpur Road", "Ashiana", "Vikas Nagar"].map((area, i) => (
+                <span key={i} className="text-xs bg-gray-800 px-2 py-1 rounded text-gray-400 border border-gray-700 hover:border-green-800 transition-colors cursor-default">
                   {area}
                 </span>
               ))}
             </div>
-            <div className="mt-6">
+            <div>
                <a
                  href={`tel:${CONTACT_INFO.phone}`}
-                 className="block w-full text-center bg-green-700 hover:bg-green-600 text-white font-bold py-3 rounded-lg transition-colors"
+                 className="block w-full text-center bg-green-700 hover:bg-green-600 text-white font-bold py-3 rounded-lg transition-colors shadow-lg shadow-green-900/20"
                >
                  Book Appointment
                </a>
