@@ -6,7 +6,7 @@ export const JSON_LD_DATA = {
     {
       "@type": ["LocalBusiness", "MedicalBusiness"],
       "name": "Kanchankaya Naturopathy Center",
-      "image": "https://mrsvandanamishra.whitecoats.com/images/logo.png", // Placeholder, adjust if real image available
+      "image": "https://mrsvandanamishra.whitecoats.com/images/logo.png",
       "founder": {
         "@type": "Person",
         "name": "Dr. Vandana Mishra"
@@ -24,8 +24,8 @@ export const JSON_LD_DATA = {
       "email": "vandana.kaya@gmail.com",
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "26.8467", // Approximate coordinates for Lucknow/Alambagh
-        "longitude": "80.9462" // Needs exact from Google Business if available
+        "latitude": "26.8467",
+        "longitude": "80.9462"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -110,6 +110,28 @@ export const JSON_LD_DATA = {
         }
       ],
       "knowsAbout": ["Naturopathy", "Yoga Therapy", "Acupressure"]
+    },
+    {
+      "@type": "MedicalBusiness",
+      "medicalSpecialty": ["Naturopathy", "Alternative Medicine", "Holistic Wellness"],
+      "servicesOffered": [
+        "Naturopathy Healing Therapies",
+        "Chronic Pain Management",
+        "Therapeutic Yoga & Meditation",
+        "Acupressure & Magnet Therapy",
+        "Physiotherapy & Rehabilitation",
+        "Diet & Nutrition Counseling",
+        "Lifestyle Management",
+        "Women's Health & Wellness"
+      ],
+      "acceptsNewPatients": true
+    },
+    {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "261"
     },
     {
       "@type": "FAQPage",

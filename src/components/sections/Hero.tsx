@@ -1,4 +1,4 @@
-import { Phone, Star, Users, MapPin, Building, CheckCircle, GraduationCap } from "lucide-react";
+import { Phone, Star, Users, MapPin, Building, CheckCircle, GraduationCap, MessageCircle } from "lucide-react";
 import { CONTACT_INFO } from "@/lib/constants";
 
 export function Hero() {
@@ -28,34 +28,33 @@ export function Hero() {
               </h2>
 
               <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                Welcome to Kanchankaya Naturopathy Center, Lucknow&apos;s most trusted naturopathy clinic since 1996. Led by Dr. Vandana Mishra with 29+ years of experience, we provide comprehensive natural healing solutions combining naturopathy, yoga therapy, acupressure, physiotherapy, and holistic wellness treatments.
+                Welcome to Kanchankaya Naturopathy Center, Lucknow&apos;s most trusted naturopathy clinic since 1996. Led by Dr. Vandana Mishra with 29+ years of experience, we provide comprehensive natural healing solutions combining naturopathy, yoga therapy, acupressure, physiotherapy, and holistic wellness treatments. Serving over 10,000+ satisfied patients in Lucknow with a 4.7-star rating across 260+ reviews, we specialize in treating chronic pain, arthritis, diabetes, obesity, cervical spondylitis, stress disorders, and lifestyle diseases through completely natural, drug-free therapies.
               </p>
             </div>
 
             {/* Trust Badges */}
-            <div className="flex flex-wrap gap-3 md:gap-4">
+            <div className="flex flex-wrap gap-y-3 gap-x-2 md:gap-4">
               <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
                 <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
-                <span className="text-sm font-semibold text-gray-700">4.7/5 Rating</span>
+                <span className="text-sm font-semibold text-gray-700">4.7/5 Star Rating (260+ Reviews)</span>
               </div>
               <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
                 <Users className="h-4 w-4 text-green-600" />
-                <span className="text-sm font-semibold text-gray-700">10,000+ Patients</span>
+                <span className="text-sm font-semibold text-gray-700">10,000+ Patients Treated</span>
               </div>
                <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
                 <Building className="h-4 w-4 text-green-600" />
-                <span className="text-sm font-semibold text-gray-700">Est. 1996</span>
+                <span className="text-sm font-semibold text-gray-700">Lucknow&apos;s Oldest (Since 1996)</span>
               </div>
                <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
                 <GraduationCap className="h-4 w-4 text-green-600" />
-                <span className="text-sm font-semibold text-gray-700">29+ Yrs Expert</span>
+                <span className="text-sm font-semibold text-gray-700">29+ Years Expert Team</span>
+              </div>
+               <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
+                <CheckCircle className="h-4 w-4 text-green-600" />
+                <span className="text-sm font-semibold text-gray-700">100% Natural & Drug-Free</span>
               </div>
             </div>
-
-             {/* Additional Trust Badge row for smaller screens if needed, or wrap above */}
-             <div className="flex items-center gap-2 text-sm text-green-700 font-medium">
-               <CheckCircle className="h-4 w-4" /> 100% Natural & Drug-Free Treatments
-             </div>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -72,9 +71,14 @@ export function Hero() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-lg bg-green-50 px-8 py-4 text-base font-bold text-green-700 shadow-sm transition-all hover:bg-green-100 border-2 border-green-200 hover:border-green-300 w-full sm:w-auto"
               >
+                <MessageCircle className="mr-2 h-5 w-5" />
                 WhatsApp Now
               </a>
             </div>
+
+             <div className="text-sm text-gray-500 font-medium sm:hidden text-center">
+                Call: {CONTACT_INFO.phone}
+             </div>
           </div>
 
           <div className="relative mt-8 lg:mt-0">

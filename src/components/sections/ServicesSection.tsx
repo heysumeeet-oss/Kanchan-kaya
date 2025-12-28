@@ -34,12 +34,12 @@ export function ServicesSection() {
                   Complete Naturopathy Treatment in Lucknow
                 </h4>
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                  Experience authentic naturopathy healing including hydrotherapy, mud therapy, chromotherapy, fasting therapy, and massage therapy. We treat digestive disorders, skin conditions, and provide complete body detoxification.
+                  Experience authentic naturopathy healing at Lucknow&apos;s premier natural treatment center. Our naturopathy therapies include hydrotherapy (water therapy using hot/cold applications), mud therapy (detoxifying clay applications), chromotherapy (healing through color), fasting therapy (therapeutic detoxification), massage therapy (natural oil-based treatments), steam baths, and enema therapy.
                 </p>
                 <ul className="text-sm text-gray-500 space-y-1 mb-4">
-                  <li className="flex items-center gap-2">✓ Complete body detoxification</li>
+                  <li className="flex items-center gap-2">✓ Complete body detoxification without chemicals</li>
                   <li className="flex items-center gap-2">✓ Enhanced natural immunity</li>
-                  <li className="flex items-center gap-2">✓ Improved digestive function</li>
+                  <li className="flex items-center gap-2">✓ Improved digestive function and metabolism</li>
                 </ul>
               </div>
             </div>
@@ -53,13 +53,13 @@ export function ServicesSection() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Chronic Pain Management
+                  Chronic Pain Management & Stress Relief
                 </h3>
                 <h4 className="text-sm font-semibold text-green-600 mb-3 uppercase tracking-wide">
-                  Natural Pain Relief Treatment - Drug-Free
+                  Natural Pain Relief Treatment in Lucknow - Drug-Free Solutions
                 </h4>
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                  Specialized naturopathy pain management for back pain, neck pain, arthritis, sciatica, and migraines. We use hydrotherapy, acupressure, and therapeutic massage to address root causes like inflammation and posture.
+                  Suffering from chronic pain? Our specialized naturopathy pain management program in Lucknow provides effective, lasting relief without painkillers or medications. We treat back pain, neck pain, shoulder pain, knee pain, joint pain, arthritis pain, sciatica, migraine headaches, and fibromyalgia using natural therapeutic modalities.
                 </p>
                 <ul className="text-sm text-gray-500 space-y-1 mb-4">
                   <li className="flex items-center gap-2">✓ Lasting pain reduction</li>
@@ -81,10 +81,10 @@ export function ServicesSection() {
                   Therapeutic Yoga & Meditation
                 </h3>
                 <h4 className="text-sm font-semibold text-green-600 mb-3 uppercase tracking-wide">
-                  Yoga Therapy Classes in Lucknow
+                  Yoga Therapy Classes in Lucknow - Personalized Healing Yoga
                 </h4>
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                  Medical yoga therapy designed specifically for healing and rehabilitation. Programs for arthritis, diabetes, hypertension, and stress. Supervised by Dr. Vandana Mishra.
+                  Kanchankaya offers Lucknow&apos;s most comprehensive therapeutic yoga programs designed specifically for healing and rehabilitation, not just fitness. Our medical yoga therapy is supervised by Dr. Vandana Mishra, certified yoga therapist with 29+ years experience.
                 </p>
                 <ul className="text-sm text-gray-500 space-y-1 mb-4">
                   <li className="flex items-center gap-2">✓ Personalized pose modifications</li>
@@ -106,10 +106,10 @@ export function ServicesSection() {
                   Acupressure & Magnet Therapy
                 </h3>
                 <h4 className="text-sm font-semibold text-green-600 mb-3 uppercase tracking-wide">
-                  Ancient Healing Technique
+                  Acupressure Treatment in Lucknow - Ancient Healing Technique
                 </h4>
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                  Stimulates specific pressure points to activate natural healing. Effective for migraines, hormonal imbalances, and stress. Combined with medical-grade magnet therapy for enhanced circulation.
+                  Acupressure therapy at Kanchankaya Naturopathy Lucknow stimulates specific pressure points to activate the body&apos;s natural healing mechanisms. This painless, non-invasive therapy improves energy flow, reduces pain, enhances organ function, and promotes overall wellness.
                 </p>
                 <ul className="text-sm text-gray-500 space-y-1 mb-4">
                   <li className="flex items-center gap-2">✓ Painless & non-invasive</li>
@@ -131,10 +131,10 @@ export function ServicesSection() {
                   Physiotherapy & Rehabilitation
                 </h3>
                 <h4 className="text-sm font-semibold text-green-600 mb-3 uppercase tracking-wide">
-                  Expert Physical Rehabilitation
+                  Physiotherapy Treatment in Lucknow - Expert Physical Rehabilitation
                 </h4>
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                  Comprehensive physical therapy for musculoskeletal conditions, post-injury recovery, and neurological disorders. Integrated with naturopathy for holistic healing.
+                  Our physiotherapy department at Kanchankaya Naturopathy Center Lucknow provides comprehensive physical therapy and rehabilitation services for musculoskeletal conditions, post-injury recovery, post-surgical rehabilitation, and neurological disorders.
                 </p>
                 <ul className="text-sm text-gray-500 space-y-1 mb-4">
                   <li className="flex items-center gap-2">✓ Post-stroke & fracture rehab</li>
@@ -153,13 +153,13 @@ export function ServicesSection() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Diet & Nutrition Counseling
+                  Personalized Diet & Nutrition Counseling
                 </h3>
                 <h4 className="text-sm font-semibold text-green-600 mb-3 uppercase tracking-wide">
-                  Naturopathy Dietitian in Lucknow
+                  Naturopathy Dietitian in Lucknow - Natural Nutrition Plans
                 </h4>
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                  Personalized, scientifically designed diet plans. Specialized programs for diabetes, weight loss, hypertension, kidney health, and digestive disorders.
+                  Nutrition is fundamental to naturopathy healing. Our nutrition counseling at Kanchankaya Lucknow provides personalized, scientifically designed diet plans that support your healing journey and promote long-term wellness.
                 </p>
                 <ul className="text-sm text-gray-500 space-y-1 mb-4">
                   <li className="flex items-center gap-2">✓ Whole, natural food focus</li>
@@ -178,13 +178,13 @@ export function ServicesSection() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Lifestyle Management
+                  Lifestyle Management & Wellness Programs
                 </h3>
                 <h4 className="text-sm font-semibold text-green-600 mb-3 uppercase tracking-wide">
-                  Holistic Disease Management
+                  Holistic Lifestyle Disease Management in Lucknow
                 </h4>
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                  Comprehensive programs for modern lifestyle diseases like diabetes, hypertension, obesity, cholesterol, and metabolic syndrome.
+                  Modern lifestyle diseases require comprehensive lifestyle modifications beyond just medical treatment. Our lifestyle management programs at Kanchankaya address diabetes, hypertension, obesity, cholesterol issues, PCOD/PCOS, thyroid disorders, fatty liver, and metabolic syndrome through integrated natural approaches.
                 </p>
                 <ul className="text-sm text-gray-500 space-y-1 mb-4">
                   <li className="flex items-center gap-2">✓ Complete health assessment</li>
@@ -206,10 +206,10 @@ export function ServicesSection() {
                   Women&apos;s Health & Wellness
                 </h3>
                 <h4 className="text-sm font-semibold text-green-600 mb-3 uppercase tracking-wide">
-                  Natural Solutions for Women
+                  Naturopathy for Women&apos;s Health Issues in Lucknow
                 </h4>
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                  Specialized treatments for PCOD/PCOS, hormonal imbalances, menstrual disorders, infertility support, and prenatal/postnatal wellness.
+                  Kanchankaya provides specialized naturopathy treatments for women&apos;s health conditions including PCOD/PCOS, irregular periods, menstrual pain, hormonal imbalances, menopausal symptoms, infertility support, pregnancy wellness, postnatal recovery, and reproductive health issues.
                 </p>
                 <ul className="text-sm text-gray-500 space-y-1 mb-4">
                   <li className="flex items-center gap-2">✓ Hormonal balancing naturally</li>
