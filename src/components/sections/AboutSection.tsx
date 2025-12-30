@@ -1,4 +1,5 @@
 import { CheckCircle2, Leaf, Heart, Award } from "lucide-react";
+import Image from "next/image";
 
 export function AboutSection() {
   return (
@@ -39,10 +40,20 @@ export function AboutSection() {
           {/* Right Side Cards */}
           <div className="space-y-8">
              {/* Dr. Vandana Mishra Card */}
-            <div className="bg-green-50 p-6 md:p-8 rounded-2xl border border-green-100 shadow-sm relative">
+            <div className="bg-green-50 p-6 md:p-8 rounded-2xl border border-green-100 shadow-sm relative overflow-hidden">
               <div className="absolute top-0 right-0 p-6 opacity-10">
                 <Award className="h-24 w-24 text-green-800" />
               </div>
+
+              <div className="relative w-full h-64 mb-6 rounded-xl overflow-hidden shadow-sm">
+                <Image
+                    src="/images/dr-vandana.png"
+                    alt="Dr. Vandana Mishra"
+                    fill
+                    className="object-cover"
+                />
+              </div>
+
               <h3 className="text-2xl font-bold text-green-900 mb-4">
                 Dr. Vandana Mishra <br />
                 <span className="text-base font-medium text-green-700">Leading Naturopathy Expert in Lucknow</span>

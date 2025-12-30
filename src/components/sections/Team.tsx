@@ -1,5 +1,5 @@
 import { Award, GraduationCap, Clock } from "lucide-react";
-// import Image from "next/image"; // Commented out until we have actual images
+import Image from "next/image";
 
 export function Team() {
   return (
@@ -17,11 +17,12 @@ export function Team() {
         <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
           <div className="grid md:grid-cols-5">
             <div className="md:col-span-2 bg-green-100 relative min-h-[400px]">
-               {/* Placeholder for Dr. Vandana's Image */}
-               <div className="absolute inset-0 flex items-center justify-center text-green-800/20 text-4xl font-bold p-4 text-center">
-                 Dr. Vandana Mishra
-               </div>
-               {/* <Image src="/path/to/image.jpg" alt="Dr. Vandana Mishra" fill className="object-cover" /> */}
+               <Image
+                 src="/images/dr-vandana.png"
+                 alt="Dr. Vandana Mishra"
+                 fill
+                 className="object-cover"
+               />
             </div>
 
             <div className="md:col-span-3 p-8 md:p-12 space-y-6">
