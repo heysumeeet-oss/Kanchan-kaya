@@ -7,15 +7,9 @@
 - Network:       http://192.168.0.2:3000
 
 ✓ Starting...
-Attention: Next.js now collects completely anonymous telemetry regarding usage.
-This information is used to shape Next.js' roadmap and prioritize features.
-You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
-https://nextjs.org/telemetry
-
-✓ Ready in 1083ms
+✓ Ready in 1133ms
 ○ Compiling / ...
- GET / 200 in 10.3s (compile: 6.5s, render: 3.8s)
- GET /bg-pattern.svg 404 in 1897ms (compile: 1695ms, render: 202ms)
- GET /about 200 in 789ms (compile: 653ms, render: 135ms)
- GET /bg-pattern.svg 404 in 108ms (compile: 6ms, render: 102ms)
- GET / 200 in 804ms (compile: 7ms, render: 797ms)
+ GET / 200 in 11.5s (compile: 7.3s, render: 4.2s)
+ GET /bg-pattern.svg 404 in 2.5s (compile: 2.3s, render: 189ms)
+ GET /bg-pattern.svg 404 in 87ms (compile: 12ms, render: 75ms)
+ GET / 200 in 764ms (compile: 6ms, render: 759ms)
