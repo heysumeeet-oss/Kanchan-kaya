@@ -1,5 +1,6 @@
 import { Phone, Star, Users, MapPin, Building, CheckCircle, GraduationCap, MessageCircle, ArrowRight } from "lucide-react";
 import { CONTACT_INFO } from "@/lib/constants";
+import Image from "next/image";
 
 export function Hero() {
   return (
@@ -77,13 +78,15 @@ export function Hero() {
           <div className="relative mt-8 lg:mt-0 px-4 md:px-0 animate-in fade-in slide-in-from-right-8 duration-1000">
              {/* Main Image Container */}
             <div className="relative rounded-[2rem] overflow-hidden shadow-2xl shadow-green-900/20 aspect-[4/3] lg:aspect-[5/6] transform rotate-1 lg:rotate-2 hover:rotate-0 transition-transform duration-500">
-               {/* Placeholder for actual image - replace with Next.js Image component when assets are available */}
-               <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center">
-                   <div className="text-center p-8">
-                       <span className="block text-7xl mb-6">🌿</span>
-                       <p className="text-green-800 font-serif text-2xl md:text-3xl italic">Healing Mind, Body & Spirit</p>
-                   </div>
-               </div>
+               <Image
+                 src="/images/kanchankaya-clinic-exterior.jpg"
+                 alt="Kanchankaya Naturopathy Center Exterior View - Best Naturopathy Center in Lucknow"
+                 title="Kanchankaya Naturopathy Center - Natural Healing Clinic"
+                 fill
+                 className="object-cover"
+                 priority
+                 sizes="(max-width: 1024px) 90vw, 50vw"
+               />
 
                {/* Overlay Gradient */}
                <div className="absolute inset-0 bg-gradient-to-t from-green-900/40 via-transparent to-transparent"></div>
