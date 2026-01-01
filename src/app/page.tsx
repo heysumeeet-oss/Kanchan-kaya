@@ -8,6 +8,7 @@ import { FAQ } from "@/components/sections/FAQ";
 import { TreatmentProcess } from "@/components/sections/TreatmentProcess";
 import { Team } from "@/components/sections/Team";
 import { Facility } from "@/components/sections/Facility";
+import { GallerySection } from "@/components/sections/GallerySection";
 import { LocalSEO } from "@/components/sections/LocalSEO";
 import { BlogTeasers } from "@/components/sections/BlogTeasers";
 import { Contact } from "@/components/sections/Contact";
@@ -30,6 +31,7 @@ export default function Home() {
       <Testimonials />
       <Team />
       <Facility />
+      <GallerySection />
       <FAQ />
       <BlogTeasers />
       <LocalSEO />
