@@ -3,19 +3,24 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
+import Image from 'next/image';
 
 const galleryImages = [
-  // Placeholder data - replace with real images later
-  { src: "/images/gallery-placeholder-1.jpg", alt: "Treatment Room" },
-  { src: "/images/gallery-placeholder-2.jpg", alt: "Yoga Hall" },
-  { src: "/images/gallery-placeholder-3.jpg", alt: "Consultation" },
-  { src: "/images/gallery-placeholder-4.jpg", alt: "Therapy Session" },
-  { src: "/images/gallery-placeholder-5.jpg", alt: "Entrance" },
-  { src: "/images/gallery-placeholder-6.jpg", alt: "Garden" },
+  { src: "/images/gallery/kanchankaya-clinic-exterior.jpg", alt: "Kanchankaya Naturopathy Clinic Exterior View" },
+  { src: "/images/gallery/clinic-reception-hall.jpg", alt: "Clinic Reception and Waiting Hall" },
+  { src: "/images/gallery/meditation-buddha-statue.jpg", alt: "Meditation Area with Buddha Statue" },
+  { src: "/images/gallery/wellness-center-shrine.jpg", alt: "Wellness Center Spiritual Shrine" },
+  { src: "/images/gallery/buddha-wall-art.jpg", alt: "Serene Buddha Wall Mural" },
+  { src: "/images/gallery/yoga-hall-session.webp", alt: "Group Yoga Session in Main Hall" },
+  { src: "/images/gallery/treatment-therapy-room.webp", alt: "Naturopathy Treatment and Therapy Room" },
+  { src: "/images/gallery/patient-accommodation.webp", alt: "Patient Accommodation Room" },
 ];
 
 export function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  // Find the selected image object for alt text
+  const activeImage = galleryImages.find(img => img.src === selectedImage);
 
   return (
     <section className="py-20 bg-green-50">
@@ -30,7 +35,7 @@ export function GallerySection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {galleryImages.map((img, index) => (
                 <motion.div
                     key={index}
@@ -41,15 +46,14 @@ export function GallerySection() {
                     className="relative aspect-square group cursor-pointer overflow-hidden rounded-xl shadow-md bg-white border border-green-100"
                     onClick={() => setSelectedImage(img.src)}
                 >
-                    {/* Placeholder content until real images are available */}
-                    <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-400 group-hover:scale-105 transition-transform duration-300">
-                        {/* If real image exists: <img src={img.src} alt={img.alt} className="w-full h-full object-cover" /> */}
-                        <div className="text-center p-4">
-                            <span className="block mb-2 font-medium text-gray-500">{img.alt}</span>
-                            <span className="text-xs text-gray-400">(Image coming soon)</span>
-                        </div>
-                    </div>
-                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <Image
+                        src={img.src}
+                        alt={img.alt}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    />
+                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
                         <div className="bg-white/90 p-2 rounded-full shadow-lg">
                            <ZoomIn className="w-6 h-6 text-green-600" />
                         </div>
@@ -59,31 +63,37 @@ export function GallerySection() {
         </div>
 
         <AnimatePresence>
-            {selectedImage && (
+            {selectedImage && activeImage && (
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+                    className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
                     onClick={() => setSelectedImage(null)}
                 >
-                    <button className="absolute top-4 right-4 text-white hover:text-green-400 transition-colors bg-white/10 p-2 rounded-full">
+                    <button className="absolute top-4 right-4 text-white hover:text-green-400 transition-colors bg-white/10 p-2 rounded-full z-50">
                         <X className="w-6 h-6" />
                     </button>
                     <motion.div
-                        initial={{ scale: 0.9 }}
-                        animate={{ scale: 1 }}
-                        exit={{ scale: 0.9 }}
-                        className="relative max-w-4xl w-full max-h-[80vh] rounded-lg overflow-hidden bg-white aspect-video flex items-center justify-center shadow-2xl"
+                        initial={{ scale: 0.9, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        exit={{ scale: 0.9, opacity: 0 }}
+                        className="relative max-w-5xl w-full max-h-[90vh] rounded-lg overflow-hidden flex items-center justify-center"
                         onClick={(e) => e.stopPropagation()}
                     >
-                         {/* Placeholder for lightbox */}
-                         <div className="text-center p-8">
-                             <div className="text-2xl font-bold text-gray-300 mb-4">Preview Unavailable</div>
-                             <div className="text-gray-400">Image Source: {selectedImage}</div>
-                             <p className="mt-4 text-sm text-gray-500">Real images have not been uploaded yet.</p>
+                         <div className="relative w-full h-full aspect-video">
+                            <Image
+                                src={activeImage.src}
+                                alt={activeImage.alt}
+                                fill
+                                className="object-contain"
+                                sizes="90vw"
+                            />
                          </div>
                     </motion.div>
+                    <div className="absolute bottom-4 left-0 right-0 text-center text-white pointer-events-none">
+                        <p className="text-lg font-medium">{activeImage.alt}</p>
+                    </div>
                 </motion.div>
             )}
         </AnimatePresence>

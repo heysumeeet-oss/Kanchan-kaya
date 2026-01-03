@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import { GallerySection } from "@/components/sections/GallerySection";
 
 export const metadata: Metadata = {
   title: "About Kanchankaya Naturopathy Center | Dr. Vandana Mishra",
@@ -38,16 +40,26 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="bg-gray-100 rounded-2xl h-[400px] flex items-center justify-center text-gray-400">
-               {/* Image Placeholder */}
-               <span className="text-lg">Clinic/Facility Image</span>
+            <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
+               <Image
+                 src="/images/gallery/kanchankaya-clinic-exterior.jpg"
+                 alt="Kanchankaya Naturopathy Center Building View"
+                 fill
+                 className="object-cover"
+                 sizes="(max-width: 768px) 100vw, 50vw"
+               />
             </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-             <div className="order-2 lg:order-1 bg-gray-100 rounded-2xl h-[400px] flex items-center justify-center text-gray-400">
-               {/* Image Placeholder */}
-               <span className="text-lg">Dr. Vandana Mishra Image</span>
+             <div className="order-2 lg:order-1 relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
+               <Image
+                 src="/images/gallery/treatment-therapy-room.webp"
+                 alt="Treatment and Therapy Room"
+                 fill
+                 className="object-cover"
+                 sizes="(max-width: 768px) 100vw, 50vw"
+               />
             </div>
             <div className="order-1 lg:order-2">
               <h2 className="text-3xl font-bold text-green-900 mb-6">Meet Dr. Vandana Mishra</h2>
@@ -72,6 +84,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Gallery Section */}
+      <GallerySection />
 
       {/* Mission/Philosophy */}
       <section className="bg-green-900 text-white py-16 md:py-24">
