@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Facebook, Instagram, ArrowRight, Clock } from "lucide-react";
 import { NAV_LINKS, CONTACT_INFO, SOCIAL_LINKS } from "@/lib/constants";
 
@@ -12,7 +13,15 @@ export function Footer() {
 
           {/* Brand Column */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-white tracking-tight">Kanchankaya</h3>
+            <Link href="/" className="inline-block mb-2">
+              <Image
+                src="/images/logo.jpg"
+                alt="Kanchankaya Naturopathy Center"
+                width={210}
+                height={62}
+                className="h-12 w-auto object-contain bg-white rounded-lg p-1"
+              />
+            </Link>
             <p className="text-sm leading-relaxed max-w-xs">
               Lucknow&apos;s trusted naturopathy center since 1996. Holistic healing for mind, body, and spirit.
             </p>

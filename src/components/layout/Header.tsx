@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Phone, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { NAV_LINKS, CONTACT_INFO } from "@/lib/constants";
@@ -26,8 +27,14 @@ export function Header() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-16 lg:h-20 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2 z-50">
-            {/* You could add a logo image here */}
-            <span className="text-xl md:text-2xl font-bold text-green-800 tracking-tight">Kanchankaya</span>
+            <Image
+              src="/images/logo.jpg"
+              alt="Kanchankaya Naturopathy Center"
+              width={175}
+              height={52}
+              className="h-10 w-auto md:h-14 object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
