@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -12,6 +13,7 @@ const SERVICES_LIST = [
     id: "naturopathy",
     title: "Naturopathy Healing Therapies",
     description: "Complete body detoxification using hydrotherapy, mud therapy, fasting, and massage.",
+    image: "/images/services/naturopathy.jpg",
     details: [
       "Hydrotherapy (Water Therapy)",
       "Mud Therapy (Detoxification)",
@@ -24,6 +26,7 @@ const SERVICES_LIST = [
     id: "pain-management",
     title: "Chronic Pain Management",
     description: "Drug-free solutions for arthritis, back pain, cervical spondylitis, and migraines.",
+    image: "/images/services/pain-management.jpg",
     details: [
       "Hot/Cold Fomentation",
       "Therapeutic Massage",
@@ -36,6 +39,7 @@ const SERVICES_LIST = [
     id: "yoga",
     title: "Therapeutic Yoga & Meditation",
     description: "Personalized medical yoga programs for specific health conditions and rehabilitation.",
+    image: "/images/services/yoga.jpg",
     details: [
       "Yoga for Arthritis",
       "Diabetes Management Yoga",
@@ -48,6 +52,7 @@ const SERVICES_LIST = [
     id: "acupressure",
     title: "Acupressure & Magnet Therapy",
     description: "Stimulating specific pressure points to activate the body's natural healing mechanisms.",
+    image: "/images/services/acupressure.jpg",
     details: [
       "Pain Relief Points",
       "Digestive Health Points",
@@ -60,6 +65,7 @@ const SERVICES_LIST = [
     id: "physiotherapy",
     title: "Physiotherapy & Rehabilitation",
     description: "Expert physical therapy for musculoskeletal conditions and post-injury recovery.",
+    image: "/images/services/physiotherapy.jpg",
     details: [
       "Manual Therapy",
       "Therapeutic Exercises",
@@ -72,6 +78,7 @@ const SERVICES_LIST = [
     id: "diet",
     title: "Diet & Nutrition Counseling",
     description: "Personalized diet plans for diabetes, weight loss, and overall wellness.",
+    image: "/images/services/diet.jpg",
     details: [
       "Diabetes Diet Plans",
       "Weight Loss Programs",
@@ -126,9 +133,15 @@ export default function ServicesPage() {
                   </Link>
                 </div>
 
-                <div className={`bg-gray-100 rounded-2xl h-[300px] flex items-center justify-center text-gray-400 ${index % 2 === 1 ? 'md:col-start-1' : ''}`}>
-                  {/* Image Placeholder */}
-                  <span className="text-lg">{service.title} Image</span>
+                <div className={`relative h-[300px] rounded-2xl overflow-hidden shadow-lg ${index % 2 === 1 ? 'md:col-start-1' : ''}`}>
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    title={service.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
               </div>
             ))}
