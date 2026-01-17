@@ -1,7 +1,8 @@
 import { MetadataRoute } from 'next'
+import { WEBSITE_URL } from '@/lib/constants'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://mrsvandanamishra.whitecoats.com' // Using the existing URL as per MD
+  const baseUrl = WEBSITE_URL
 
   return [
     {
