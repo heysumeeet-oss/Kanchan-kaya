@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { WEBSITE_URL } from "@/lib/constants";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,13 +16,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(WEBSITE_URL),
   title: "Best Naturopathy Center in Lucknow | Kanchankaya Since 1996",
   description: "Leading naturopathy center in Lucknow since 1996. Expert natural healing for chronic pain, diabetes, obesity & stress. 4.7★ rated. Book consultation today!",
   keywords: "naturopathy center in Lucknow, naturopathy treatment in Lucknow, best naturopathy Lucknow, Kanchankaya Naturopathy, naturopathy clinic Lucknow, natural healing Lucknow, yoga therapy Lucknow, acupressure treatment Lucknow",
   openGraph: {
     title: "Best Naturopathy Center in Lucknow | Kanchankaya Since 1996",
     description: "Leading naturopathy center in Lucknow since 1996. Expert natural healing for chronic pain, diabetes, obesity & stress. 4.7★ rated. Book consultation today!",
-    url: "https://mrsvandanamishra.whitecoats.com/",
+    url: WEBSITE_URL,
     type: "website",
     locale: "en_IN",
     // image to be added if available, for now following existing pattern
@@ -32,7 +34,7 @@ export const metadata: Metadata = {
     description: "Leading naturopathy center in Lucknow since 1996. Expert natural healing",
   },
   alternates: {
-    canonical: "https://mrsvandanamishra.whitecoats.com/",
+    canonical: WEBSITE_URL,
   }
 };
 

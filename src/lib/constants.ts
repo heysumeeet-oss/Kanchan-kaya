@@ -1,3 +1,5 @@
+export const WEBSITE_URL = "https://www.kayanaturopathy.in";
+
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },

@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { WEBSITE_URL } from '@/lib/constants'
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://mrsvandanamishra.whitecoats.com/sitemap.xml',
+    sitemap: `${WEBSITE_URL}/sitemap.xml`,
   }
 }

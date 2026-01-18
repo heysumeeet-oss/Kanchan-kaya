@@ -1,4 +1,4 @@
-import { FAQS } from "./constants";
+import { FAQS, WEBSITE_URL } from "./constants";
 
 export const JSON_LD_DATA = {
   "@context": "https://schema.org",
@@ -6,7 +6,7 @@ export const JSON_LD_DATA = {
     {
       "@type": ["LocalBusiness", "MedicalBusiness"],
       "name": "Kanchankaya Naturopathy Center",
-      "image": "https://mrsvandanamishra.whitecoats.com/images/logo.png",
+      "image": `${WEBSITE_URL}/images/logo.jpg`,
       "founder": {
         "@type": "Person",
         "name": "Dr. Vandana Mishra"
